@@ -1,10 +1,10 @@
-# Series de Tiempo, Agosto de 2023
+# Series de Tiempo, Agosto de 2025
 # Clase 0.5. Introduccion
 
 #****************************************************************************************
 getwd()
 # Cambiar la siguiente ruta dependiendo de la ubicación en sus equipos
-setwd("/Users/benjamin/Documents/Personal/Cursos_UNAM/SERIES_2025-I/Series-Tiempo-2024/Clase_00")
+setwd("/Users/benjamin/Documents/Personal/Cursos_Tec/Econometría II/Econometria-II-2025-Tec/Clase_00")
 
 getwd()
 

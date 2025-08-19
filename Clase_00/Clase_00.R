@@ -1,4 +1,4 @@
-# Estadistica I, Otoño de 2024
+# Series de Tiempo, Agosto de 2025
 # Primeros Códigos. Introduccion
 
 #****************************************************************************************
