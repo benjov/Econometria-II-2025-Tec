@@ -1,7 +1,7 @@
 ---
 title: "Clase 3. Autocorrelacion y otras pruebas sobre los datos"
-author: "Benjamin Oliva & Omar Alfaro-Rivera"
-date: "29/8/2025"
+author: "Benjamin Oliva"
+date: "20/8/2025"
 output: html_document
 editor_options: 
   chunk_output_type: inline
@@ -164,32 +164,6 @@ ggplot(data = Datos, aes(x = Periodo)) +
 
 ```
 
-# EJERCICIO -- COMPLETAR:
-
-```{r, echo = FALSE}
-
-ggplot(data = Datos, aes(x = Periodo)) +
-  geom_line(aes(y = Pax_Nal, color = )) +
-  geom_line(aes(y = Pax_Int, color = )) +
-  scale_color_brewer(type = "qual", palette = 6) +
-  #theme_bw() +
-  theme(legend.position = "bottom") +
-  theme(legend.title = element_blank()) +
-  guides(col = guide_legend(nrow = 1, byrow = TRUE)) +
-  xlab("Tiempo") +
-  ylab("Pasajeros") +
-  theme(plot.title = element_text(size = 11, face = "bold", hjust = 0)) +
-  theme(plot.subtitle = element_text(size = 10, hjust = 0)) +
-  theme(plot.caption = element_text(size = 10, hjust = 0)) +
-  theme(plot.margin = unit(c(1,1,1,1), "cm")) +
-  labs(
-    title = "Número de vuelos nacionales e internacionales (Salidas)",
-    subtitle = "(Ene-2000 a Jun-2019)",
-    caption = "Fuente: Elaboración propia con información del INEGI, \nhttps://www.inegi.org.mx/app/indicadores/?tm=0&t=1090"
-  )
-
-```
-
 # Tabla de estadisticas de caracterización de las Series de Tiempo
 
 ```{r}
@@ -201,10 +175,8 @@ Tabla_Pax_Metro <- data.frame(matrix(c("Media",
                                       "Covarianza (t, t - 3)", 
                                       "Autocorrelacion(1)", 
                                       "Autocorrelacion(2)", 
-                                      "Autocorrelacion(3)", 
-                                      "Q(1)", 
-                                      "Q(3)*"), 
-                                    nrow = 10, 
+                                      "Autocorrelacion(3)"), 
+                                    nrow = 8, 
                                     ncol = 1) )
 
 #
@@ -243,10 +215,6 @@ Tabla_Pax_Metro[5, 2] <- round(cov(Pax_Metro[4:281], Pax_Metro[1:278]), digits =
 Tabla_Pax_Metro[6, 2] <- round(Tabla_Pax_Metro[3, 2]/Tabla_Pax_Metro[2, 2], digits = 2)
 Tabla_Pax_Metro[7, 2] <- round(Tabla_Pax_Metro[4, 2]/Tabla_Pax_Metro[2, 2], digits = 2)
 Tabla_Pax_Metro[8, 2] <- round(Tabla_Pax_Metro[5, 2]/Tabla_Pax_Metro[2, 2], digits = 2)
-Tabla_Pax_Metro[9, 2] <- round(281*(Tabla_Pax_Metro[6, 2]^2), digits = 2)
-Tabla_Pax_Metro[10, 2] <- round(281*(Tabla_Pax_Metro[6, 2]^2 +
-                               Tabla_Pax_Metro[7, 2]^2 +
-                               Tabla_Pax_Metro[8, 2]^2), digits = 2)
 
 #
 Tabla_Pax_Metro
@@ -264,11 +232,5 @@ acf(Pax_Metro,
 
 ```
 
-# Estadística Q
 
-```{r}
-
-Box.test(Pax_Metro, lag = 1)
-
-```
 

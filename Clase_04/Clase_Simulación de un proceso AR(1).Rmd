@@ -1,7 +1,7 @@
 ---
 title: "Clase 4. Simulación de un proceso AR(1)"
-author: "Benjamin Oliva & Omar Alfaro-Rivera"
-date: "21/9/20212"
+author: "Benjamin Oliva"
+date: "20/8/2025"
 output: html_document
 editor_options: 
   chunk_output_type: inline
@@ -149,7 +149,7 @@ ggsave("G_AR_1_Teo.png", width = 20, height = 10, units = "cm")
 ```{r, echo = FALSE}
 
 ggplot(data = X_t, aes(x = Tiempo, y = XR_t)) + 
-  geom_line(size = 0.5, color = "darkred") +
+  geom_line(linewidth = 0.5, color = "darkred") +
   #theme_bw() + 
   xlab("Tiempo") + 
   ylab(TeX("$X_t$")) + 
