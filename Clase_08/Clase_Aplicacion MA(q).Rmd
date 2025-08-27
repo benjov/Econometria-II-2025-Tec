@@ -1,6 +1,6 @@
 ---
 title: "Clase 8. Aplicacion MA(q)"
-author: "Benjamin Oliva & Omar Alfaro-Rivera"
+author: "Benjamin Oliva "
 date: "30/9/2023"
 output: html_document
 editor_options: 
