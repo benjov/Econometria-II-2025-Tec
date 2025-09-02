@@ -1,5 +1,5 @@
 ---
-title: "Clase 11. Procesos No Estacionarios (Pruebas de Raices Unitarias)"
+title: "Clase 13. Procesos No Estacionarios (Pruebas de Raices Unitarias)"
 author: "Benjamin Oliva"
 date: "15/08/2025"
 output: html_document
