@@ -254,6 +254,18 @@ plot(ARMA_Ex_DLPax_Nal$residuals,
      ylab = "",
      main = "Residuales ARMA Diff LN Pasajeros Nacionales",
      col = "darkblue")
+
+par(mfrow=c(1,2))
+
+plot.armaroots(arroots(ARMA_Ex_DLPax_Nal), 
+               main="Inverse AR roots of \nAR(p): LN PAx Nal")
+
+plot.armaroots(maroots(ARMA_Ex_DLPax_Nal), 
+               main="Inverse MA roots of \nMA(q): LN PAx Nal")
+
+par(mfrow=c(1,1))
+
+
 ```
 
 # Nueva Estimacion del proceso ARIMA(p, 1, q):
@@ -271,7 +283,7 @@ Lag_Opt_ARIMA_Exog(p_max = 8, q_max = 8,
 ```{r}
 # Estimacion:
 
-ARMA_Ex_DLPax_Nal_2 <- arima(DLPax_Nal, order = c(6, 0, 6),
+ARMA_Ex_DLPax_Nal_2 <- arima(DLPax_Nal, order = c(8, 0, 8),
                              xreg = cbind(D_Ene, D_Feb, D_Jul, D_Dic, D_Mar2020, D_Abr2020, D_Jun2020, D_Jul2020, D_Mar2021),
                              method = "ML")
 

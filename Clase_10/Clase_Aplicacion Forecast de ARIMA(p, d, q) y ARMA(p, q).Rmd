@@ -135,7 +135,7 @@ par(mfrow=c(1,1))
 
 ```{r}
 
-ARMA_Ex_DLPax_Nal_2 <- arima(DLPax_Nal, order = c(6, 0, 6),
+ARMA_Ex_DLPax_Nal_2 <- arima(DLPax_Nal, order = c(8, 0, 8),
                              xreg = cbind(D_Ene, D_Feb, D_Jul, D_Dic, D_Mar2020, D_Abr2020, D_Jun2020, D_Jul2020, D_Mar2021),
                              method = "ML")
 
@@ -226,8 +226,8 @@ Pronostico_Arima <- read_excel("Pronostico_Arima.xlsx", sheet = "Datos", col_nam
 Pronostico_Arima$Pax_Nal_f <- Pronostico_Arima$Pax_Nal
 
 for(i in 1:24){
-  Pronostico_Arima$Pax_Nal_f[294 + i] <- 
-    Pronostico_Arima$Pax_Nal_f[294 + i - 1]*(1 + DLPax_Nal_f$pred[i])
+  Pronostico_Arima$Pax_Nal_f[306 + i] <- 
+    Pronostico_Arima$Pax_Nal_f[306 + i - 1]*(1 + DLPax_Nal_f$pred[i])
 }
 
 View(Pronostico_Arima)
