@@ -37,7 +37,7 @@ Los datos "cargados" son:
 
 * TDesocupa_H: Tasa de desocupación de Hombres (Porcentaje de la Población Económicamente Activa)	
 
-* TDesocupa_H: Tasa de desocupación de Mujeres (Porcentaje de la Población Económicamente Activa)
+* TDesocupa_M: Tasa de desocupación de Mujeres (Porcentaje de la Población Económicamente Activa)
 
 Fuente: https://www.inegi.org.mx/app/indicadores/?tm=0
 
