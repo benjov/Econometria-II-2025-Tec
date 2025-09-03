@@ -1,0 +1,143 @@
+---
+title: "Práctica 2. Implementación de Raíces Unitarias"
+author: "Tú"
+date: "03/09/2025"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+
+### Dependencies and Setup
+```{r setup, include = FALSE, warning = FALSE, message = FALSE}
+# Ajusta lo que consideres relevante:
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 999, digits = 4)
+
+# 
+library(ggplot2)
+library(dplyr)
+library(readxl)
+library(stats)
+library(MASS)
+library(strucchange)
+library(zoo)
+library(sandwich)
+library(urca)
+library(lmtest)
+library(vars)
+```
+
+# Importamos Datos desde un archivo de R:
+
+Los datos "cargados" son:
+
+* Informalidad: Tasa de informalidad laboral (Porcentaje de la población ocupada)
+
+* TDesocupa: Tasa de desocupación (Porcentaje de la Población Económicamente Activa)
+
+* TDesocupa_H: Tasa de desocupación de Hombres (Porcentaje de la Población Económicamente Activa)	
+
+* TDesocupa_H: Tasa de desocupación de Mujeres (Porcentaje de la Población Económicamente Activa)
+
+Fuente: https://www.inegi.org.mx/app/indicadores/?tm=0
+
+```{r echo = FALSE}
+
+Datos <- read_excel("Data_Practica_02.xlsx", sheet = "Datos", col_names = TRUE)
+
+head(Datos)
+
+```
+
+## Conversion a series de tiempo:
+
+[Selecciona dos series]
+
+```{r}
+
+# Tú Código va acá: 
+
+# Series en niveles (o logaritmos) y en diferencias logaritmicas
+
+```
+
+# Gráficas
+
+[Gráfica tus datos y coloca tu interpretación de lo que identificas en las gráficas]
+```{r echo = FALSE}
+
+# Tú código va aquí:
+
+```
+
+# Pruebas de Raices Unitarias
+
+[Implementa cada una de las pruebas para tus dos series.]
+
+## Augmented Dickey - Fuller
+
+p = int{4*(T/100)^(1/4)}
+   = int{4*(282/100)^(1/4)}
+   = int{5.18}
+   = 5
+
+### NIVELES: 
+
+```{r}
+
+# Túcódigo va acá: Modelo A, Modelo B y Modelo C
+
+```
+
+### DIFERENCIAS: 
+
+```{r}
+
+# Túcódigo va acá: Modelo A, Modelo B y Modelo C
+
+```
+
+## PP: Phillips - Perron Test
+
+ur.pp = function (x, type = c("Z-alpha", "Z-tau"), model = c("constant", "trend"), lags = c("short", "long"), use.lag = NULL) 
+
+### NIVELES: 
+
+```{r}
+
+# Túcódigo va acá: Modelo A, Modelo B y Modelo C
+
+```
+
+### DIFERENCIAS: 
+
+```{r}
+
+# Túcódigo va acá: Modelo A, Modelo B y Modelo C
+
+```
+
+## KPSS: 
+
+ur.kpss = function (y, type = c("mu", "tau"), lags = c("short", "long", "nil"), use.lag = NULL)
+
+### NIVELES: 
+
+```{r}
+
+# Túcódigo va acá: Modelo A, Modelo B y Modelo C
+
+```
+
+### DIFERENCIAS: 
+
+```{r}
+
+# Túcódigo va acá: Modelo A, Modelo B y Modelo C
+
+```
+
+# Reporte y Conclusiones
+
+[Escribe tus conclusiones. Es decir, responde y argumenta si ¿las series son estacionarias, en niveles o en diferencias?]
+
