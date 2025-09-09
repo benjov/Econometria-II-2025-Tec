@@ -27,13 +27,7 @@ c) Procesos ARMA(p, q) y ARIMA(p, d, q)
 
 d) Función de Autocorrelación, Función de Autocorrelación Parcial y Pronósticos
 
-## 4. Modelos univariados de volatilidad
-
-a) Modelos ARCH y GARCH
-
-b) Otros ejemplos de modelos de volatilidad
-
-## 5. Procesos No Estacionarios
+## 4. Procesos No Estacionarios
 
 a) Definición y Formas de No Estacionariedad
 
@@ -42,6 +36,12 @@ b) Eliminación de la Tendencia
 c) Pruebas de Raíz Unitaria: Dickey-Fuller, Dickey-Fuller Aumentada, Phillips-Perron y de Cambio Estructural
 
 d) Descomposición de Series de Tiempo (Filtros)
+
+## 5. Modelos univariados de volatilidad
+
+a) Modelos ARCH y GARCH
+
+b) Otros ejemplos de modelos de volatilidad
 
 # Recursos del Curso:
 
