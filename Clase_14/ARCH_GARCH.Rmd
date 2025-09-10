@@ -17,6 +17,7 @@ output: html_document
 #install.packages("MTS")
 #install.packages("rmgarch")
 #install.packages("Rcpp")
+#install.packages("highcharter")
 library(expm)
 library(Matrix)
 library(ggplot2)
@@ -34,6 +35,7 @@ library(tsbox)
 library(MTS)
 library(rmgarch)
 library(Rcpp)
+library(highcharter)
 ```
 ## Librería __Quantmod__
 
@@ -56,6 +58,15 @@ chartSeries(BTC,TA='addBBands();
                 theme="white")
 
 head(BTC)
+```
+
+
+```{r}
+# Gráfico interactivo tipo velas
+hchart(BTC, type = "candlestick") %>%
+  hc_title(text = "BTC-USD con Highcharts") %>%
+  hc_rangeSelector(enabled = TRUE) %>%
+  hc_add_theme(hc_theme_flat())
 ```
 
 Para fines del ejercicio de esta clase, usaremos el valor de la acción ajustado. Esto nos servirá para calcular el rendimiento diario, o puesto en lenguaje de series temporales podemos decir que usaremos la serie en diferencias logarítmicas. 
